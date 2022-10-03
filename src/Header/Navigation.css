@@ -1,0 +1,34 @@
+:root {
+    --lightBlue: #7d7dbb;
+    --silver: silver;
+}
+
+.navigation-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    font-size: 2.5vmax;
+    width: 50%;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.Navlink {
+    padding: 0.5vw 2vw;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--silver);
+}
+
+.active {
+    background-color: maroon;
+    transition: all 0.5s;
+}
+
+@media(max-width:1024px) {
+    .navigation-ul {
+        width: 80%;
+    }
+}

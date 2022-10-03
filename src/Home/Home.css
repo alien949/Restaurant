@@ -1,0 +1,97 @@
+.home-outer-div{
+    text-align: center;
+}
+
+.home-p-welcome {
+    font-size: 2.5vmax;
+    background: linear-gradient(to right, white 0%, white 5%, silver 6%, silver 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: welcome;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    cursor: default;
+    font-style: italic;
+}
+
+
+
+.home-horizontal-line {
+    width: 10vw;
+
+}
+
+.div-around-imgs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.resturant-photos {
+    box-shadow: 0 0px 20px silver;
+    border: 5px ridge silver;
+    width: 60vw;
+    height: 30vw;
+    border-radius: 20px;
+    
+}
+
+.slider-animation-right-click{
+    animation-name: slider-right;
+    animation-duration: 1.5s;
+}
+
+.slider-animation-left-click{
+    animation-name: slider-left;
+    animation-duration: 1.5s;
+}
+
+.home-slider-div {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.slider-arrows {
+    cursor: pointer;
+    max-width: 5vw;
+}
+
+.p-above-footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2vmax;
+    color: silver;
+}
+
+@keyframes slider-right {
+    0% {
+        transform: translateX(-70vw);
+    }
+
+    100%{
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes slider-left {
+    0% {
+        transform: translateX(70vw);
+    }
+
+    100%{
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes welcome {
+    to {
+        background-position: 200% center;
+    }
+}
