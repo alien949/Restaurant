@@ -1,0 +1,61 @@
+.about-outer-div {
+    width: 100vw;
+    text-align: center;
+    margin: 50px auto;
+    color: silver;
+
+}
+
+.about-us-p {
+    font-weight: bolder;
+    font-size: max(2vw, 16px);
+    margin-bottom: 50px;
+
+}
+
+.history-div,
+.cuisine-div,
+.staff-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history,
+.cuisine,
+.staff {
+    font-size: max(2vw, 16px);
+    margin-left: max(1.5vw, 15px);
+
+}
+
+.down-arrow1,
+.down-arrow2,
+.down-arrow3 {
+    width: max(3vw, 30px);
+    cursor: pointer;
+}
+
+.about-us-history-p {
+    transition: 1s ;
+    font-size: max(1vw, 16px);
+    width: 50vw;
+    height: 0px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    max-height: 150px;
+
+}
+
+
+.about-us-cuisine-p,
+.about-us-staff-p {
+    transition: 1s !important;
+    font-size: max(1vw, 16px);
+    width: 50vw;
+    height: 0px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    max-height: 150px;
+
+}

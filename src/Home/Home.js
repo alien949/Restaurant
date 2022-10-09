@@ -59,7 +59,6 @@ function Home() {
     }, 1500);
   }, [currentImage]);
 
-  console.log(clickCheker);
 
   return (
     <div className="home-outer-div">

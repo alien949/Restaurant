@@ -42,3 +42,22 @@
     transition: 2s;
 
 }
+
+
+@media(max-width:700px){
+    .div-around-footer-imgs{
+        width: 20vw;
+    }
+
+    .footer-website-imgs{
+        width: 4vw;
+    }
+
+    .logo{
+        width: 7vw;
+    }
+
+    .crypto{
+        font-size: 3vw;
+    }
+}

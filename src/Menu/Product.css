@@ -1,11 +1,14 @@
 .outer-div-product {
+    position: relative;
     background-color: rgb(254, 229, 183);
     border: 5px double rgb(255, 255, 100);
     background-size: 100% 100%;
     padding: 20px;
-    margin-top: 50px;
+    margin: 50px 30px 50px 30px;
     border-radius: 20px;
     width: 380px;
+    transition: 1s;
+
 
 }
 
@@ -16,11 +19,13 @@
 }
 
 .product-name-p {
+    height: 40px;
     padding: 10px;
     width: 100%;
 }
 
 .product-price-p {
+    height: 20px;
     padding: 10px;
 }
 
@@ -32,6 +37,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+
 }
 
 .add-to-cart {
@@ -39,11 +46,30 @@
     background-color: rgb(251, 251, 107);
     border-radius: 10px;
     padding: 5px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
 
 }
 
-.add-to-cart:hover{
-transform: scale(1.2);
+.details {
+    background-color: rgb(251, 251, 107);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.details:hover {
+    transform: scale(1.2);
+}
+
+.outer-div-product:hover .details {
+    opacity: 1;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    transform: scale(1.2);
 }
 
 .outer-div-product:hover .add-to-cart {
@@ -52,13 +78,17 @@ transform: scale(1.2);
     cursor: pointer;
 }
 
-.outer-div-product:hover{
-    transition: 1s;
+.outer-div-product:hover {
     transform: scale(1.1);
 }
 
-@media(max-width:480px){
+@media(max-width:480px) {
     .outer-div-product {
-        width: 300px;
+        width: 200px;
+        height: 300px;
+    }
+
+    .product-images {
+        height: 60%;
     }
 }

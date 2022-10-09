@@ -1,8 +1,24 @@
-.products-outer-div{
+.products-outer-div {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    border: 5vw solid;
+    border-image: url("../Images/border-image.png") 43%;
+    margin: 50px 0;
+}
+
+.menu-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid orange;
+    background-color: orange;
+    color: black;
+
+}
+
+.menu-select option {
+    background-color: orange;
 }

@@ -1,0 +1,23 @@
+.cart-total-price {
+    position: relative;
+    margin: max(1vw, 20px);
+    color: orange;
+    font-size: max(2vw, 16px);
+}
+
+
+.total-price-and-remove-all-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: max(1vw, 20px);
+}
+
+.remove-all{
+    font-size: max(1.2vw, 12px);
+    width: fit-content;
+    background-color: orange;
+    border-radius: max(1.3vw, 10px);
+    padding: max(1vw, 5px);
+    cursor: pointer;
+}
