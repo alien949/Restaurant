@@ -11,41 +11,53 @@ import Footer from "./Footer/Footer";
 import { Context } from "./Context/Context";
 import Cart from "./Cart/Cart";
 import ParticularProduct from "./ParticularProduct/ParticularProduct";
+import RegisterForm from "./Register/RegisterForm";
+
 function App() {
+  const [formVisible, setFormVisible] = useState(false);
   const [currency, setCurrency] = useState("$");
   const [totalPrice, setTotalPrice] = useState(0);
   const [cartNumber, setCartNumber] = useState(0);
-
+  const [isLogged, setIsLogged] = useState(false);
+  //increasing number of cart
   function increaseCartNumber(productName) {
     Data.map((item) => {
       if (item.status === "Remove" && item.name === productName) {
         setCartNumber(cartNumber + 1);
-        console.log("gaeshva");
       }
     });
   }
-
+  // decreasing number of cart
   function decreaseCartNumber(productName) {
     Data.map((item) => {
       if (item.status === "Add to cart" && item.name === productName) {
         setCartNumber(cartNumber - 1);
-        console.log("gaeshva");
       }
     });
   }
-
-  useEffect(() => {
-    return localStorage.clear();
-  }, []);
+  // show login form or hide it
+  function formVisibleHandler(e) {
+    const form = document.querySelector(".register-login-form");
+    const login = document.querySelector("#login");
+    if (form !== null && !form.contains(e.target) && e.target.id !== "login") {
+      setFormVisible(false);
+    }
+  }
+  //eventListener on window
+  window.addEventListener("click", formVisibleHandler);
 
   return (
     <div className="App">
-      <Context.Provider value={{ Data: Data }}>
+      <Context.Provider
+        value={{ Data: Data, isLogged: isLogged, setIsLogged: setIsLogged }}
+      >
         <Routes basename="/tothepoint_login">
           <Route
-            path="/"
+            path="/restaurant"
             element={
               <Header
+                setFormVisible={setFormVisible}
+                formVisible={formVisible}
                 currency={currency}
                 setCurrency={setCurrency}
                 cartNumber={cartNumber}
@@ -80,11 +92,20 @@ function App() {
                 />
               }
             />
-            <Route path="*" element={<Home />} />
+            <Route path="/restaurant" element={<Home />} />
             <Route
               path="menu/:id"
-              element={<ParticularProduct currency={currency} />}
+              element={
+                <ParticularProduct
+                  currency={currency}
+                  cartNumber={cartNumber}
+                  setCartNumber={setCartNumber}
+                  totalPrice={totalPrice}
+                  setTotalPrice={setTotalPrice}
+                />
+              }
             />
+            <Route path="Register" element={<RegisterForm />} />
           </Route>
         </Routes>
         <Footer />
